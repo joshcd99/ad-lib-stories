@@ -15,7 +15,6 @@ To run this project, clone the repository and open it in Xcode.
 git clone https://github.com/yourusername/mad-lib-app.git
 cd mad-lib-app
 open Ad-Lib-Stories.xcodeproj
-```
 
 ## Adding stories
 
