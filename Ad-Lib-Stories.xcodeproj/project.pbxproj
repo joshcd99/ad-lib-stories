@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E18F16A92B5E1129009BBEDF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E1B02CF42B5DD51D00784265 /* Ad-Lib-Stories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ad-Lib-Stories.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B02CF72B5DD51D00784265 /* Ad_Lib_StoriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad_Lib_StoriesApp.swift; sourceTree = "<group>"; };
 		E1B02CF92B5DD51D00784265 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		E1B02CEB2B5DD51D00784265 = {
 			isa = PBXGroup;
 			children = (
+				E18F16A92B5E1129009BBEDF /* README.md */,
 				E1B02CF62B5DD51D00784265 /* Ad-Lib-Stories */,
 				E1B02D072B5DD51E00784265 /* Ad-Lib-StoriesTests */,
 				E1B02D112B5DD51E00784265 /* Ad-Lib-StoriesUITests */,
