@@ -32,7 +32,6 @@ struct CompletedPuzzleView: View {
             if segment.type == "fixed" {
                 text += segment.content ?? ""
             } else if segment.type == "blank" {
-                // Use the index to access the answer for this blank segment.
                 text += answers[index] ?? ""
             }
         }

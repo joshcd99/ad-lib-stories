@@ -15,7 +15,7 @@ struct PuzzleSelectionView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(red: 0.953, green: 0.435, blue: 0.235).ignoresSafeArea() // Set the background color here
+                Color(red: 0.953, green: 0.435, blue: 0.235).ignoresSafeArea()
                 ScrollView {
                     ForEach(viewModel.puzzles) { puzzle in
                         NavigationLink(destination: PuzzleDetailView(puzzle: puzzle)) {

@@ -25,11 +25,11 @@ struct PuzzleDetailView: View {
                                 let segment = puzzle.segments[index]
                                 if segment.type == "blank", let label = segment.label {
                                     TextField("Enter a \(label)", text: self.binding(for: index))
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                                        .textFieldStyle(.roundedBorder)
                                         .padding(.horizontal)
                                 }
                             }
-                            Spacer(minLength: geometry.safeAreaInsets.bottom + 50) // Extra space for button and counter
+                            Spacer(minLength: geometry.safeAreaInsets.bottom + 50)
                         }
                     }
                     

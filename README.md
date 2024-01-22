@@ -12,7 +12,7 @@ This Swift and SwiftUI app allows users to engage with interactive stories by fi
 To run this project, clone the repository and open it in Xcode.
 
 ```sh
-git clone https://github.com/yourusername/mad-lib-app.git
+git clone https://github.com/joshcd99/mad-lib-app.git
 cd mad-lib-app
 open Ad-Lib-Stories.xcodeproj
 ```
