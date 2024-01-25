@@ -10,11 +10,14 @@ import Foundation
 
 class PuzzleViewModel: ObservableObject {
     @Published var puzzles: [Puzzle] = []
+    private var bundle: Bundle
 
-    init() {
+    init(bundle: Bundle = .main) {
+        self.bundle = bundle
         loadPuzzles()
     }
 
+    // FIXME: Add error handling for missing puzzle file.
     func loadPuzzles() {
         guard let url = Bundle.main.url(forResource: "puzzles", withExtension: "json"),
               let data = try? Data(contentsOf: url) else {

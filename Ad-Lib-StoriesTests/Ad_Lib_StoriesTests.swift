@@ -8,29 +8,43 @@
 import XCTest
 @testable import Ad_Lib_Stories
 
-final class Ad_Lib_StoriesTests: XCTestCase {
+class MockBundle: Bundle {
+    override func url(forResource name: String?, withExtension ext: String?) -> URL? {
+        return self.url(forResource: "MockPuzzles", withExtension: "json")
+    }
+}
+
+class PuzzleViewModelTests: XCTestCase {
+    var viewModel: PuzzleViewModel!
+    var mockBundle: MockBundle!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        mockBundle = MockBundle()
+        viewModel = PuzzleViewModel(bundle: mockBundle)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
+        mockBundle = nil
+        super.tearDown()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func testLoadPuzzlesSuccess() {
+        // When loading puzzles
+        viewModel.loadPuzzles()
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        // Then there should be puzzles loaded
+        XCTAssertFalse(viewModel.puzzles.isEmpty, "Puzzles should be loaded from the mock JSON.")
+    }
+    
+    func testLoadPuzzlesFailure() throws {
+            // When loading puzzles
+            viewModel.loadPuzzles()
+
+            // Then there should be no puzzles loaded due to the simulated failure
+            XCTAssertTrue(viewModel.puzzles.isEmpty, "Puzzles should not be loaded when there is an error.")
         }
-    }
-
 }
+
+

@@ -1,0 +1,12 @@
+[
+    {
+        "id": "Test ID"
+        "title": "Test Puzzle",
+        "segments": [
+            {"type": "fixed", "content": "Once upon a time, "},
+            {"type": "blank", "label": "noun"},
+            {"type": "fixed", "content": " ran away."},
+            {"type": "blank", "label": "verb"}
+        ]
+    }
+]
